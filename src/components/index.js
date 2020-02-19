@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Container, Col, Row } from 'react-bootstrap';
 import Profile from './profile/Profile';
 import Skills from './skill/Skills';
 import Contact from './contact/Contact';
 import WorkHistory from './work_history/WorkHistory';
 import Feedback from './feedback/Feedback';
-import { Grid } from '@material-ui/core';
 import {
   Collapse,
   Navbar,
@@ -15,11 +13,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  UncontrolledDropdown
 } from 'reactstrap';
 
 const Div = styled.div`
@@ -30,10 +24,6 @@ grid-template-columns: 1fr
   margin: 0em auto 0em auto;
   justify-content: center;
   padding: 0!important;
-`;
-
-const P = styled.p`
-  font-size: 35px;
 `;
 
 const Bar = styled.div`
@@ -57,36 +47,30 @@ const Img = styled.img`
 
 export default class index extends Component {
   state = {
-    screen: 'skill'
+    screen: 'work history'
   };
 
   handleAction(action) {
-    switch (action) {
-      case 'home':
-        this.setState({
-          screen: 'profile'
-        });
-        break;
-      case 'skill':
-        this.setState({
-          screen: 'skill'
-        });
-        break;
-      case 'work history':
-        this.setState({
-          screen: 'work history'
-        });
-        break;
-      case 'contact':
-        this.setState({
-          screen: 'contact'
-        });
-        break;
-      case 'feedback':
-        this.setState({
-          screen: 'feedback'
-        });
-      default:
+    if (action === 'home') {
+      this.setState({
+        screen: 'profile'
+      });
+    } else if (action === 'skill') {
+      this.setState({
+        screen: 'skill'
+      });
+    } else if (action === 'work history') {
+      this.setState({
+        screen: 'work history'
+      });
+    } else if (action === 'contact') {
+      this.setState({
+        screen: 'contact'
+      });
+    } else if (action === 'feedback') {
+      this.setState({
+        screen: 'feedback'
+      });
     }
   }
 
@@ -95,20 +79,6 @@ export default class index extends Component {
       <Div>
         <Navbar color='light' light expand='md'>
           <NavbarBrand href='/'>{this.state.screen.toUpperCase()}</NavbarBrand>
-          <NavbarToggler onClick={console.log('click')} />
-          <Collapse isOpen={console.log('isopen')} navbar>
-            <Nav className='mr-auto' navbar>
-              <NavItem>
-                <NavLink href='/components/'>Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='https://github.com/reactstrap/reactstrap'>
-                  GitHub
-                </NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar></UncontrolledDropdown>
-            </Nav>
-          </Collapse>
         </Navbar>
         {this.state.screen === 'profile' ? (
           <Profile />
