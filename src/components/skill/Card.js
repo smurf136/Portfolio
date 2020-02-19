@@ -4,32 +4,54 @@ import Card from '@material-ui/core/Card';
 
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 const CardCon = styled(Card)`
   minwidth: 250;
-  margin-top: 3rem;
 `;
 
-export default class Cards extends Component {
+const Div = styled.div`
+  margin-top: 3rem;
+  :last-child {
+    margin-bottom: 5rem;
+  }
+`;
 
-    state = {
-        src: '',
-        name: '',
-        level: ''
-      };
-      
+const Img = styled.img``;
+
+export default class Cards extends Component {
+  state = {
+    src: '',
+    name: '',
+    level: ''
+  };
+
+  componentDidMount() {
+    if (this.state.src !== this.props.src) {
+      this.setState({
+        src: this.props.src,
+        name: this.props.name,
+        level: this.props.level
+      });
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.src !== this.props.src) {
+      this.setState({
+        src: this.props.src,
+        name: this.props.name,
+        level: this.props.level
+      });
+    }
+  }
+
   render() {
     return (
-      <div>
-        <Cards style={{ minWidth: 345 }}>
+      <Div>
+        <CardCon style={{ minWidth: 345 }}>
           <CardActionArea>
-            <CardMedia
-              style={{ height: 150 }}
-              image={this.state.src}
-              title='Contemplative Reptile'
-            />
+            <Img src={this.state.src} alt={this.state.name} />
             <CardContent>
               <Typography gutterBottom variant='h5' component='h2'>
                 {this.state.name}
@@ -39,8 +61,8 @@ export default class Cards extends Component {
               </Typography>
             </CardContent>
           </CardActionArea>
-        </Cards>
-      </div>
+        </CardCon>
+      </Div>
     );
   }
 }
