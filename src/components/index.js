@@ -6,14 +6,8 @@ import Contact from './contact/Contact';
 import WorkHistory from './work_history/WorkHistory';
 import Feedback from './feedback/Feedback';
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown
+  NavbarBrand
 } from 'reactstrap';
 
 const Div = styled.div`
@@ -47,7 +41,7 @@ const Img = styled.img`
 
 export default class index extends Component {
   state = {
-    screen: 'work history'
+    screen: 'profile'
   };
 
   handleAction(action) {
@@ -96,7 +90,7 @@ export default class index extends Component {
           </>
         ) : this.state.screen === 'feedback' ? (
           <>
-            <Feedback />
+            <Feedback db={this.props.db}/>
           </>
         ) : (
           ''
