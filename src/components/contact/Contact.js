@@ -13,11 +13,13 @@ import Divider from '@material-ui/core/Divider';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     maxWidth: 360,
-    height: '30vh',
+    height: '47vh',
     backgroundColor: theme.palette.background.paper
   }
 }));
@@ -64,6 +66,24 @@ const Contact = () => {
             </Avatar>
           </ListItemAvatar>
           <ListItemText primary='Github' secondary='smurf136' />
+        </ListItem>
+        <Divider variant='inset' component='li' />
+        <ListItem onClick={() => window.location.href='https://www.linkedin.com/in/apiwat-aeeabundit-1261351a1/'}>
+          <ListItemAvatar>
+            <Avatar>
+              <LinkedInIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary='LinkedIn' secondary='Apiwat Aeeabundit' />
+        </ListItem>
+        <Divider variant='inset' component='li' />
+        <ListItem onClick={() => window.location.href='https://www.facebook.com/apiwatsun90'}>
+          <ListItemAvatar>
+            <Avatar>
+              <FacebookIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary='Facebook' secondary='Apiwat Aeeabundit' />
         </ListItem>
         <Divider variant='inset' component='li' />
       </List>
