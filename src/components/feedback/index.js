@@ -19,7 +19,7 @@ const Form = styled.form`
 `
 
 
-export default class Feedback extends Component {
+export default class Index extends Component {
   state = {
     feedbacks: ''
   };

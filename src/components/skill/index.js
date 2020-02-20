@@ -19,7 +19,7 @@ const Container = styled.div`
   overflow: scroll;
 `;
 
-export default class Skills extends Component {
+export default class Index extends Component {
  
   render() {
     return (

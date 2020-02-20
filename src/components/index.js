@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Profile from './profile/Profile';
-import Skills from './skill/Skills';
-import Contact from './contact/Contact';
-import WorkHistory from './work_history/WorkHistory';
-import Feedback from './feedback/Feedback';
+import Profile from './profile/index';
+import Skills from './skill/index';
+import Contact from './contact/index';
+import WorkHistory from './work_history/index';
+import Feedback from './feedback/index';
 import { Navbar, NavbarBrand } from 'reactstrap';
 
 const Div = styled.div`

@@ -29,7 +29,7 @@ const P = styled.p`
   font-size: 25px;
 `;
 
-export default class Profile extends Component {
+export default class Index extends Component {
   render() {
     return (
       <Div>

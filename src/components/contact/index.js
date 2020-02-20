@@ -35,7 +35,7 @@ const Div = styled.div`
   padding-top 1em;
 `;
 
-const Contact = () => {
+const Index = () => {
   const classes = useStyles();
 
   return (
@@ -91,4 +91,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Index;
