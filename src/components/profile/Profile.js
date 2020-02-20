@@ -7,7 +7,7 @@ const Div = styled.div`
   flex-flow: wrap;
   flex-direction: column;
   margin: auto 0;
-  height: 90vh;
+  height: 80vh;
   width: 100vw;
   background-color: #59626282;
 `;
