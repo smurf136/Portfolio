@@ -1,22 +1,74 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { makeStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
+import ImageIcon from '@material-ui/icons/Image';
+import WorkIcon from '@material-ui/icons/Work';
+import BeachAccessIcon from '@material-ui/icons/BeachAccess';
+import Divider from '@material-ui/core/Divider';
+import PhoneIcon from '@material-ui/icons/Phone';
+import EmailIcon from '@material-ui/icons/Email';
+import GitHubIcon from '@material-ui/icons/GitHub';
+const useStyles = makeStyles(theme => ({
+  root: {
+    width: '100%',
+    maxWidth: 360,
+    height: '30vh',
+    backgroundColor: theme.palette.background.paper
+  }
+}));
 
 const Div = styled.div`
-    display: grid;
-    position: relative;
-    justify-items: center;
-    margin: auto 0;
-    height: 75vh;
-    width: 100vw;
-    background-color: #59626282;
-`
+  display: grid;
+  position: relative;
+  justify-items: center;
+  margin: auto 0;
+  height: 75vh;
+  width: 100vw;
+  background-color: #59626282;
+  padding-top 1em;
+`;
 
-export default class index extends Component {
-    render() {
-        return (
-            <Div>
-                <p>Contact</p>
-            </Div>
-        )
-    }
-}
+const Contact = () => {
+  const classes = useStyles();
+
+  return (
+    <Div>
+      <List className={classes.root}>
+        <ListItem onClick={() => window.location.href='tel://0969622249'}>
+          <ListItemAvatar>
+            <Avatar>
+              <PhoneIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary='Telephone Number' secondary='095-739-2420' />
+        </ListItem>
+        <Divider variant='inset' component='li' />
+        <ListItem onClick={() => window.location.href='mailto://apiwat.sun.90@gmail.com'}>
+          <ListItemAvatar>
+            <Avatar>
+              <EmailIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary='Email' secondary='apiwat.sun.90@gmail.com' />
+        </ListItem>
+        <Divider variant='inset' component='li' />
+        <ListItem onClick={() => window.location.href='https://www.github.com/smurf136'}>
+          <ListItemAvatar>
+            <Avatar>
+              <GitHubIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary='Github' secondary='smurf136' />
+        </ListItem>
+        <Divider variant='inset' component='li' />
+      </List>
+    </Div>
+  );
+};
+
+export default Contact;
