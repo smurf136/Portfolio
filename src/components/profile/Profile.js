@@ -7,7 +7,7 @@ const Div = styled.div`
   flex-flow: wrap;
   flex-direction: column;
   margin: auto 0;
-  height: 80vh;
+  height: 75vh;
   width: 100vw;
   background-color: #59626282;
 `;
@@ -15,7 +15,7 @@ const Img = styled.img`
   border-radius: 50%;
   width: 10rem;
   position: relative;
-margin: 3em auto;
+  margin: 3em auto;
 `;
 
 const Content = styled.div`

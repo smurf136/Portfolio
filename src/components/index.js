@@ -11,7 +11,7 @@ const Div = styled.div`
 display: grid;
 grid-template-columns: 1fr
   border: 1px solid #fffff;
-  height: 100vh!important;
+  height: 70vh!important;
   margin: 0em auto 0em auto;
   justify-content: center;
   padding: 0!important;
@@ -24,7 +24,7 @@ const Bar = styled.div`
   grid-auto-flow: row;
   bottom: 0;
   left: 0;
-  height: 10vh;
+  height: 5vh;
   width: 100vw;
   justify-content: space-around;
   background-color: wheat;
@@ -84,7 +84,7 @@ export default class index extends Component {
   render() {
     return (
       <Div>
-        <Navbar color='light' light expand='md'>
+        <Navbar color='light' light expand='md' style={{height: "5em"}}>
           <NavbarBrand href='/'>{this.state.screen.toUpperCase()}</NavbarBrand>
         </Navbar>
         {this.state.screen === 'profile' ? (

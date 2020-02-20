@@ -18,7 +18,7 @@ const Div = styled.div`
   position: relative;
   justify-items: center;
   margin: auto 0;
-  height: 80vh;
+  height: 75vh;
   width: 100vw;
   background-color: #59626282;
   padding: 1em 1em 0em 1em;

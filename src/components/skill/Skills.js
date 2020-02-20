@@ -13,7 +13,7 @@ const Div = styled.div`
 const Container = styled.div`
   position: relative;
   margin: auto 0;
-  height: 80vh;
+  height: 75vh;
   width: 100vw;
   background-color: #59626282;
   overflow: scroll;
