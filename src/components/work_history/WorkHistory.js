@@ -18,7 +18,7 @@ const Div = styled.div`
   position: relative;
   justify-items: center;
   margin: auto 0;
-  height: 90vh;
+  height: 80vh;
   width: 100vw;
   background-color: #59626282;
   padding: 1em 1em 0em 1em;
@@ -67,6 +67,10 @@ const Img = styled.img`
       width: 14vw;
   }
 `;
+
+const Chips = styled(Chip)`
+  justify-content: start;
+`
 
 const useStyles = makeStyles(theme => ({
   modal: {
@@ -117,32 +121,32 @@ const WorkHistory = () => {
                 Role: Member <br />
                 Tools: <br />
                 <Box3>
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='Docker' src='docker.png' />}
                     label='Docker'
                     onDelete={handleOpen}
                     color='primary'
                   />
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='centos7' src='centos7.png' />}
                     label='CENTOS7'
                     onDelete={handleOpen}
                     color='primary'
                   />
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='nginx' src='nginx.png' />}
                     label='NGINX'
                     onDelete={handleOpen}
                     color='primary'
                   />
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='pm2' src='pm2.png' />}
                     label='PM2'
                     onDelete={handleOpen}
                     color='primary'
                   />
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='jenkins' src='jenkins.png' />}
                     label='Jenkins'
                     onDelete={handleOpen}
                     color='primary'
@@ -175,8 +179,8 @@ const WorkHistory = () => {
                 Role: Member <br />
                 Tools: <br />
                 <Box3>
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='phaser' src='phaser.png' />}
                     label='Phaser Js'
                     onDelete={handleOpen}
                     color='primary'
@@ -209,8 +213,8 @@ const WorkHistory = () => {
                 Role: Member <br />
                 Tools: <br />
                 <Box3>
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='phaser' src='phaser.png' />}
                     label='Phaser Js'
                     onDelete={handleOpen}
                     color='primary'
@@ -239,14 +243,14 @@ const WorkHistory = () => {
                 Role: Member <br />
                 Tools: <br />
                 <Box3>
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='centos7' src='centos7.png' />}
                     label='CENTOS7'
                     onDelete={handleOpen}
                     color='primary'
                   />
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='jenkins' src='jenkins.png' />}
                     label='Jenkins'
                     onDelete={handleOpen}
                     color='primary'
@@ -275,38 +279,38 @@ const WorkHistory = () => {
                 Role: Leader <br />
                 Tools: <br />
                 <Box3>
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='React' src='logo192.png' />}
                     label='React Js'
                     onDelete={handleOpen}
                     color='primary'
                   />
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='spring-boot-192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='Springboot' src='spring-boot-192.png' />}
                     label='SpringBoot'
                     onDelete={handleOpen}
                     color='primary'
                   />
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='line' src='line.png' />}
                     label='Line Login API'
                     onDelete={handleOpen}
                     color='primary'
                   />
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='line' src='line.png' />}
                     label='Line Messaging API'
                     onDelete={handleOpen}
                     color='primary'
                   />
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='line' src='line.png' />}
                     label='Line LIFF'
                     onDelete={handleOpen}
                     color='primary'
                   />
-                  <Chip
-                    avatar={<Avatar alt='Natacha' src='logo192.png' />}
+                  <Chips
+                    avatar={<Avatar alt='Natacha' src='line.png' />}
                     label='Line Rich Menu'
                     onDelete={handleOpen}
                     color='primary'
