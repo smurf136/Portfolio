@@ -12,7 +12,6 @@ import { Chip, Avatar } from '@material-ui/core';
 
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
 
 const Div = styled.div`
   display: grid;
@@ -46,13 +45,27 @@ const Box2 = styled.div`
 `;
 
 const Box3 = styled.div`
-position: relative;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 0.5rem 0;
   flex-flow: row wrap;
   flex-grow: 1;
   width: 10vw;
+`;
+
+const Img = styled.img`
+@media (max-width: 768px) {
+    width: 54vw;
+  }
+
+  @media (min-width: 768px) and (max-width: 1170px) {
+    width: 50vw;
+  }
+
+  @media (min-width: 1170px) {
+      width: 14vw;
+  }
 `;
 
 const useStyles = makeStyles(theme => ({
@@ -95,7 +108,7 @@ const WorkHistory = () => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Box1>
-              <img src='logo192.png' alt='Bg' />
+              <Img src='sitcraftcamp1.png' alt='Bg'  />
             </Box1>
             <Box2>
               <Typographys>
@@ -149,7 +162,11 @@ const WorkHistory = () => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Box1>
-              <img src='logo192.png' alt='Bg' />
+              <Img
+                src='helloworldbeaver.png'
+                
+                alt='Bg'
+              />
             </Box1>
             <Box2>
               <Typographys>
@@ -179,7 +196,11 @@ const WorkHistory = () => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Box1>
-              <img src='logo192.png' alt='Bg' />
+              <Img
+                src='helloworldcockatiel.jpg'
+                
+                alt='Bg'
+              />
             </Box1>
             <Box2>
               <Typographys>
@@ -209,7 +230,7 @@ const WorkHistory = () => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Box1>
-              <img src='wipcamp11.png'  style={{width: "50vw"}} alt='Bg' />
+              <Img src='wipcamp11.png'  alt='Bg' />
             </Box1>
             <Box2>
               <Typographys>
@@ -245,7 +266,7 @@ const WorkHistory = () => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Box1>
-              <img src='wipcamp12.png' style={{width: "55vw"}} alt='Bg' />
+              <Img src='wipcamp12.png' alt='Bg' />
             </Box1>
             <Box2>
               <Typographys>
@@ -295,7 +316,9 @@ const WorkHistory = () => {
             </Box2>
           </ExpansionPanelDetails>
         </ExpansionPanel>
-        <br/><br/><br/>
+        <br />
+        <br />
+        <br />
         <Modal
           aria-labelledby='transition-modal-title'
           aria-describedby='transition-modal-description'
