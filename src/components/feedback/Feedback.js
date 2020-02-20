@@ -7,7 +7,7 @@ const Div = styled.div`
   position: relative;
   justify-items: center;
   margin: auto 0;
-  height: 90vh;
+  height: 80vh;
   width: 100vw;
   background-color: #59626282;
 `;
@@ -21,13 +21,13 @@ const Form = styled.form`
 
 export default class Feedback extends Component {
   state = {
-    feedback: ''
+    feedbacks: ''
   };
 
   onChange(e) {
     console.info(e);
     this.setState({
-      feedback: e.target.value
+      feedbacks: e.target.value
     });
   }
 
@@ -50,7 +50,7 @@ export default class Feedback extends Component {
       feedback: trim(this.state.feedback)
     });
     this.setState({
-      feedback: ''
+      feedbacks: ''
     });
   }
 
@@ -67,7 +67,7 @@ export default class Feedback extends Component {
             }}
             onChange={this.onChange.bind(this)}
             onKeyUp={this.onKeyup.bind(this)}
-            value={this.state.feedback}
+            value={this.state.feedbacks}
           ></textarea>
           <hr/>
           <p>Press enter to submit.</p>
