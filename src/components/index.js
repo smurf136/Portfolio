@@ -5,10 +5,7 @@ import Skills from './skill/Skills';
 import Contact from './contact/Contact';
 import WorkHistory from './work_history/WorkHistory';
 import Feedback from './feedback/Feedback';
-import {
-  Navbar,
-  NavbarBrand
-} from 'reactstrap';
+import { Navbar, NavbarBrand } from 'reactstrap';
 
 const Div = styled.div`
 display: grid;
@@ -37,6 +34,22 @@ const Img = styled.img`
   height: 7vh;
   width: 7vh;
   margin: auto;
+`;
+
+const Nav = styled(Navbar)`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: center;
+  margin-top: 0;
+  padding: 0!important;
+`;
+
+const Button = styled.button`
+  background-color: white; 
+  border: none;
+  color: white;
 `;
 
 export default class index extends Component {
@@ -90,28 +103,29 @@ export default class index extends Component {
           </>
         ) : this.state.screen === 'feedback' ? (
           <>
-            <Feedback db={this.props.db}/>
+            <Feedback db={this.props.db} />
           </>
         ) : (
           ''
         )}
-        <Bar>
-          <button onClick={() => this.handleAction('home')}>
+        
+        <Nav>
+          <Button onClick={() => this.handleAction('home')}>
             <Img src='face-24px.svg' alt={this.state.alt} />
-          </button>
-          <button onClick={() => this.handleAction('skill')}>
+          </Button>
+          <Button onClick={() => this.handleAction('skill')}>
             <Img src='work-24px.svg' alt={this.state.alt} />
-          </button>
-          <button onClick={() => this.handleAction('work history')}>
+          </Button>
+          <Button onClick={() => this.handleAction('work history')}>
             <Img src='resume.png' alt={this.state.alt} />
-          </button>
-          <button onClick={() => this.handleAction('contact')}>
+          </Button>
+          <Button onClick={() => this.handleAction('contact')}>
             <Img src='perm_phone_msg-24px.svg' />
-          </button>
-          <button onClick={() => this.handleAction('feedback')}>
+          </Button>
+          <Button onClick={() => this.handleAction('feedback')}>
             <Img src='feedback-24px.svg' />
-          </button>
-        </Bar>
+          </Button>
+        </Nav>
       </Div>
     );
   }
