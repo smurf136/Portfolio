@@ -13,19 +13,28 @@ const Div = styled.div`
 
   @media (min-width: 1200px){
     height: 82vh;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
   }
-`;
-const Img = styled.img`
+  `;
+  const Img = styled.img`
   border-radius: 50%;
   width: 10rem;
   position: relative;
-  margin: 3em auto;
+  margin: auto;
+  
+  @media (min-width: 1200px){
+    width: 15em;
+    margin: auto 5em;
+  }
 `;
 
 const Content = styled.div`
   display: flex;
   flex-flow: wrap;
   flex-direction: column;
+  margin: auto 5em;
 `;
 
 const P = styled.p`

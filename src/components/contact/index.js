@@ -20,7 +20,10 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     maxWidth: 360,
     height: '47vh',
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.paper,
+    [theme.breakpoints.up('md')]: {
+      height: '48vh',
+    },
   }
 }));
 
