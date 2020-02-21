@@ -23,6 +23,10 @@ const Div = styled.div`
   background-color: #59626282;
   padding: 1em 1em 0em 1em;
   overflow: scroll;
+
+  @media (min-width: 1200px){
+    height: 82vh;
+  }
 `;
 
 const Divs = styled.div`

@@ -43,11 +43,11 @@ const Nav = styled(Navbar)`
   justify-items: center;
   align-items: center;
   margin-top: 0;
-  padding: 0!important;
+  padding: 0 !important;
 `;
 
 const Button = styled.button`
-  background-color: white; 
+  background-color: white;
   border: none;
   color: white;
 `;
@@ -84,7 +84,7 @@ export default class index extends Component {
   render() {
     return (
       <Div>
-        <Navbar color='light' light expand='md' style={{height: "5em"}}>
+        <Navbar color='light' light expand='md' style={{ height: '5em' }}>
           <NavbarBrand href='/'>{this.state.screen.toUpperCase()}</NavbarBrand>
         </Navbar>
         {this.state.screen === 'profile' ? (
@@ -108,7 +108,7 @@ export default class index extends Component {
         ) : (
           ''
         )}
-        
+
         <Nav>
           <Button onClick={() => this.handleAction('home')}>
             <Img src='face-24px.svg' alt={this.state.alt} />

@@ -17,6 +17,10 @@ const Container = styled.div`
   width: 100vw;
   background-color: #59626282;
   overflow: scroll;
+
+  @media (min-width: 1200px){
+    height: 82vh;
+  }
 `;
 
 export default class Index extends Component {

@@ -10,6 +10,10 @@ const Div = styled.div`
   height: 75vh;
   width: 100vw;
   background-color: #59626282;
+
+  @media (min-width: 1200px){
+    height: 82vh;
+  }
 `;
 
 const Form = styled.form`

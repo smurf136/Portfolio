@@ -33,6 +33,10 @@ const Div = styled.div`
   width: 100vw;
   background-color: #59626282;
   padding-top 1em;
+
+  @media (min-width: 1200px){
+    height: 82vh;
+  }
 `;
 
 const Index = () => {
